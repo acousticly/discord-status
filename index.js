@@ -18,7 +18,7 @@ const constants = require("./constants");
 const logger = require("./logger");
 const incidentData = new database();
 const hook = setUpWebhook();
-const roleID = process.env.roleID;
+const roleID = process.env.ROLE_ID;
 logger.logger.info(`Starting with ${hook.id}`);
 
 function setUpWebhook() {
