@@ -9,7 +9,7 @@
   "dependencies": {
     "@replit/database": "^2.0.1",
     "@types/pino": "^6.3.11",
-    "discord.js": "^13.0.0-dev.fdad14099779e61cb84dcd1cb2497e0e853a61440",
+    "discord.js": "13.0.0-dev.fdad14099779e61cb84dcd1cb2497e0e853a6144",
     "luxon": "^2.0.2",
     "node-fetch": "^2.6.1",
     "winston": "^3.3.3",

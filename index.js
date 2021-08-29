@@ -18,7 +18,6 @@ const constants = require("./constants");
 const logger = require("./logger");
 const incidentData = new database();
 const hook = setUpWebhook();
-const roleID = process.env.ROLE_ID;
 logger.logger.info(`Starting with ${hook.id}`);
 
 function setUpWebhook() {
@@ -85,8 +84,8 @@ async function updateIncident(incident, messageID) {
   const embed = embedFromIncident(incident);
   try {
     const message = await (messageID
-      ? hook.editMessage(messageID, embed, roleID)
-      : hook.send(embed, roleID));
+      ? hook.editMessage(messageID, '<@&868217413374722048>', embed)
+      : hook.send('<@&868217413374722048>', embed));
     await incidentData.set(incident.id, {
       incidentID: incident.id,
       lastUpdate: luxon.DateTime.now().toISO(),
